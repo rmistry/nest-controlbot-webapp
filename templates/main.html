@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <center>
+  <h1>Nest Controlbot</h1>
+  {% if is_admin %}
+    Last reported at {{ last_reported|date:"D M d, H:i T " }}
+    <br/><br/><br/>
+    <form action="/" name="update_arb" method="post">
+      <table class="report">
+        <tr>
+          <td>Target Temperature</td>
+          <td>{{ config.target_temperature }}</td>
+        </tr>
+        <tr>
+          <td>Room Temperature</td>
+          <td>{{ config.room_temperature }}</td>
+        </tr>
+        <tr>
+          <td>Last Reported At</td>
+          <td>{{ mins_ago }} mins</td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            {% if config.should_stop %}
+              <input type="checkbox" name="should_stop" value="Stopped" hidden>
+              <input type="submit" value="Run" name="submit" class="button action-btn">
+            {% else %}
+              <input type="checkbox" name="should_stop" value="Stopped" checked hidden>
+              <input type="submit" value="Stop" name="submit" class="button action-btn">
+            {% endif %}
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <input type="button" name="refresh" value="Refresh" class="button refresh-btn" onclick="location.href='/';">
+          </td>
+        </tr>
+      </table>
+    </form>
+  {% else %}
+    You do not have permission to view this web app.
+  {% endif %}
+  </center>
+{% endblock %}
