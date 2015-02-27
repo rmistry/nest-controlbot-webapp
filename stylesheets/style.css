@@ -32,15 +32,15 @@ table.report {
 }
 
 .button.action-btn {
-    width: 90px;
+    width: 100px;
     height: 60px;
-    font-size: 24pt;
+    font-size: 30pt;
     vertical-align: middle;
 }
 
 .button.refresh-btn {
-    width: 150px;
+    width: 160px;
     height: 60px;
-    font-size: 24pt;
+    font-size: 30pt;
     vertical-align: middle;
 }
