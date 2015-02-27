@@ -33,14 +33,14 @@ table.report {
 
 .button.action-btn {
     width: 90px;
-    height: 40px;
-    font-size: 24px;
+    height: 60px;
+    font-size: 24pt;
     vertical-align: middle;
 }
 
 .button.refresh-btn {
-    width: 110px;
-    height: 40px;
-    font-size: 24px;
+    width: 150px;
+    height: 60px;
+    font-size: 24pt;
     vertical-align: middle;
 }
