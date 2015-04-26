@@ -24,10 +24,10 @@
           <td colspan="2">
             {% if config.should_stop %}
               <input type="checkbox" name="should_stop" value="Stopped" hidden>
-              <input type="submit" value="Run" name="submit" class="button action-btn">
+              <input type="submit" value="Run" name="submit" class="button action-btn" onclick="confirm('Are you sure?');">
             {% else %}
               <input type="checkbox" name="should_stop" value="Stopped" checked hidden>
-              <input type="submit" value="Stop" name="submit" class="button action-btn">
+              <input type="submit" value="Stop" name="submit" class="button action-btn" onclick="confirm('Are you sure?');>
             {% endif %}
           </td>
         </tr>
